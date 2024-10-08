@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BasicPlayerMovement : MonoBehaviour {
+    [SerializeField] private bool player2 = false;
     [SerializeField] private float walkSpeed = 5f;
 	  private Rigidbody rb;
 	  private PlayerInputs playerInputs;
@@ -15,7 +16,8 @@ public class BasicPlayerMovement : MonoBehaviour {
     }
     void Update() {
 		    Vector3 velocity = rb.velocity;
-        Vector2 inputAxis = playerInputs.KeyboardInputs.Movement.ReadValue<Vector2>();
+        Vector2 inputAxis = playerInputs.KeyboardInputs.Movement1.ReadValue<Vector2>();
+        if(player2)inputAxis = playerInputs.KeyboardInputs.Movement2.ReadValue<Vector2>();
         velocity.x = walkSpeed * inputAxis.x;
         velocity.z = walkSpeed * inputAxis.y;
 		    rb.velocity = velocity;

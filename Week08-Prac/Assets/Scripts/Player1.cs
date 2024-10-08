@@ -1,12 +1,12 @@
 using UnityEngine;
 using System.Collections;
 
-public class Player : MonoBehaviour {
-    static private Player instance;
-    static public Player Instance {
+public class Player1 : MonoBehaviour {
+    static private Player1 instance;
+    static public Player1 Instance {
         get {
             if (instance == null) {
-                Debug.LogError("There is no Player instance in the scene.");
+                Debug.LogError("There is no Player1 instance in the scene.");
             }
             return instance;
         }
