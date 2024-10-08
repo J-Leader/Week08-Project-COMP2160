@@ -11,6 +11,7 @@ public class Player : MonoBehaviour {
             return instance;
         }
     }
+    public delegate void OnPickupEvent(int score);
     public event OnPickupEvent PickupEvent;
 
     public int totalScore = 0;
@@ -18,7 +19,6 @@ public class Player : MonoBehaviour {
 	public void OnTriggerEnter(Collider collider) {
         int pointsValue = collider.gameObject.GetComponent<CoinPickup>().pointsValue;
         totalScore += pointsValue;
-        PickupEvent?.Invoke(pointsValue)
-        //declare point scored
+        PickupEvent?.Invoke(pointsValue);
 	}
 }
