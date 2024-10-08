@@ -15,7 +15,7 @@ public class ScoreKeeper : MonoBehaviour
             }
             return instance;
         }
-    }
+    }   
 
     private int score = 0;
     public int Score
