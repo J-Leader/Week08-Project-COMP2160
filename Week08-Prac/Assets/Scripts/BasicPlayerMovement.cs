@@ -12,14 +12,14 @@ public class BasicPlayerMovement : MonoBehaviour {
 		    playerInputs.KeyboardInputs.Enable();
 	  }
     void Start() {
-		    rb = gameObject.GetComponent<Rigidbody>();
+		    rb = gameObject.GetComponent<Rigidbody>();    
     }
     void Update() {
-		    Vector3 velocity = rb.velocity;
+		Vector3 velocity = rb.velocity;
         Vector2 inputAxis = playerInputs.KeyboardInputs.Movement1.ReadValue<Vector2>();
         if(player2)inputAxis = playerInputs.KeyboardInputs.Movement2.ReadValue<Vector2>();
         velocity.x = walkSpeed * inputAxis.x;
         velocity.z = walkSpeed * inputAxis.y;
-		    rb.velocity = velocity;
+		rb.velocity = velocity;
     }
 }

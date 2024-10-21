@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UiManager : MonoBehaviour
 {
@@ -31,6 +32,6 @@ public class UiManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = string.Format(scoreFormat, GameManager.Instance.Score); 
+        //scoreText.text = string.Format(scoreFormat, GameManager.Instance.Score); 
     }
 }

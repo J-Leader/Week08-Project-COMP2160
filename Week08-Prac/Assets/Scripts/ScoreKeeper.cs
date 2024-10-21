@@ -31,7 +31,7 @@ public class ScoreKeeper : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Player.Instance.OnPickupEvent += OnScore;
+        //Player1.Instance.OnPickupEvent += OnScore;
     }
 
     // Update is called once per frame
